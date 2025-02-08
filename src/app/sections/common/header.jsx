@@ -46,7 +46,7 @@ function Header() {
                                 <li><NavLink to="/index">Home</NavLink></li>
                                 <li><NavLink to="/about-us">About Us</NavLink></li>
                                 <li className="has-child">
-    <NavLink to="/services/services1">Services</NavLink>
+    <NavLink to="/services/services2">Services</NavLink>
     <ul className="sub-menu">
         <li><NavLink to="/services/detail-1">Freight Forwarding</NavLink></li>
         <li><NavLink to="/services/detail-2">Product Sourcing</NavLink></li>

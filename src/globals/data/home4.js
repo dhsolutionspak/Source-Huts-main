@@ -63,7 +63,7 @@ export const data = {
         subtitle: "We Deliver Professional Freight & Cargo Services",
         description: "Thanks to SOURCEHUTS's extensive network and global influence, we offer reliable and affordable services worldwide.",
         branches: "295+",
-        since: "1996",
+        since: "2012",
         specifications: [
             "Expertise & Experience:With years of industry experience, we bring unmatched services in freight and logistics services.",
             "Advanced Tools & Technology:We use state-of-the-art technology to improve processes and make sure they are done correctly and quickly.",

@@ -57,7 +57,7 @@ export default function Footer1() {
                                     <h3 className="widget-title">Quick Links</h3>
                                     <ul>
                                          <li><NavLink to="/index">Home</NavLink></li>
-                                         <li><NavLink to="/services/services1">Services</NavLink></li>
+                                         <li><NavLink to="/services/services2">Services</NavLink></li>
                                          <li><NavLink to="/about-us">About</NavLink></li>
                                         <li><NavLink to="/blogs/grid">Blog</NavLink></li>
                                         <li><NavLink to="/contact">Contact Us</NavLink></li>
@@ -69,12 +69,12 @@ export default function Footer1() {
                                 <div className="widget widget_services ftr-list-center">
                                     <h3 className="widget-title">Services</h3>
                                     <ul>
-                                        <li><NavLink to="/services/detail">Freight Forwarding</NavLink></li>
-                                        <li><NavLink to="/services/detail">Product Sourcing</NavLink></li>
-                                        <li><NavLink to="/services/detail">Inventory Inspection</NavLink></li>
-                                        <li><NavLink to="/services/detail">Sample Evaluation</NavLink></li>
-                                        <li><NavLink to="/services/detail">Factory Audit</NavLink></li>
-                                        <li><NavLink to="/services/detail">Product Photography & Videography</NavLink></li>
+                                        <li><NavLink to="/services/detail-1">Freight Forwarding</NavLink></li>
+                                        <li><NavLink to="/services/detail-2">Product Sourcing</NavLink></li>
+                                        <li><NavLink to="/services/detail-3">Factory Audit</NavLink></li>
+                                        <li><NavLink to="/services/detail-4">Inspection</NavLink></li>
+                                        <li><NavLink to="/services/detail-5">Sample Evaluation</NavLink></li>
+                                        <li><NavLink to="/services/detail-6">Product Photography & Videography</NavLink></li>
                                     </ul>
                                 </div>
                             </div>

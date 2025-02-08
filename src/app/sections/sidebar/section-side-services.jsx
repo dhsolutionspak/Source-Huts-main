@@ -9,7 +9,7 @@ export default function SectionSideServices({_data}) {
                     <ul>
                         {
                             _data.map((_object, index)=>(
-                                <li key={index}><NavLink to="/services/services1">{_object}</NavLink></li>
+                                <li key={index}><NavLink to="/services/services2">{_object}</NavLink></li>
                             ))
                         }
                     </ul>

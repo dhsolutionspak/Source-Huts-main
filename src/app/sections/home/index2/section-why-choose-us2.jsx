@@ -29,7 +29,7 @@ export default function SectionWhyChooseUs2({ _data }) {
                                         <div className="tw-why-choose-tag slide-top shine-effect">
                                             <div className="tag-box">
                                                 <h2>{_data.branches}</h2>
-                                                <h3>Branches</h3>
+                                                <h3>Active Clients</h3>
                                                 <span>Since {_data.since}</span>
                                             </div>
                                         </div>

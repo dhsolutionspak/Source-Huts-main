@@ -6,7 +6,7 @@ export const data = {
         subtitle: "We Are Professional Logistics & cargo Agency",
         description: "Sed ut perspiciatis unde omnis iste natus error volup tatem accusantium dolorem que laudantium, totam inventore.",
         branches: "295+",
-        since: "1996",
+        since: "2012",
         specifications: [
             "Go beyond logistics, make the world go round and revolutionize business.",
             "Logistics through innovation, dedication, and technology. ready, set, done.",

@@ -114,7 +114,7 @@ This files [Table of contents] are outlined below
 }
 
 .site-bg-sky-blue-light {
-  background-color: #d6e9fa;
+  background-color: #000000;
 }
 
 body {
@@ -3434,7 +3434,7 @@ ol li {
     bottom: auto;
     top: 0px;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 }
 .ftr-nw-ltr .ftr-nw-ltr-inner .ftr-nw-content {
@@ -6584,7 +6584,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   position: absolute;
   content: "";
   top: 72px;
-  bottom: 200px;
+  bottom: 100px;
   left: 0px;
   width: 50%;
   z-index: -1;
