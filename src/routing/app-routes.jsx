@@ -4,6 +4,8 @@ import Home1Page from "../app/components/home/index";
 import AboutUsPage from "../app/components/misc/about-us";
 import ContactPage from "../app/components/misc/contact-us";
 import FaqPage from "../app/components/misc/faq";
+import Privacypage from "../app/components/misc/privacy-policy";
+import Termspage from "../app/components/misc/terms and conditions";
 import Error404Page from "../app/components/misc/error404";
 import BlogGridPage from "../app/components/blogs/blog-grid";
 import BlogsDetailPage from "../app/components/blogs/blog-detail";
@@ -36,6 +38,8 @@ function AppRoutes() {
             <Route path='/blogs/detail' element={<BlogsDetailPage />} />
             <Route path='/contact-us' element={<ContactPage />} />
             <Route path='/track-a-shipment' element={<TrackaShipment />} />
+            <Route path='/privacy-policy' element={<Privacypage/>} />
+            <Route path='/terms-and-conditions' element={<Termspage/>} />
             <Route path='*' element={<Error404Page/>} />
             <Route element={<Error404Page/>} />
         </Routes>

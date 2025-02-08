@@ -83,9 +83,9 @@ export default function Footer1() {
                                 <div className="widget widget_services ftr-list-center">
                                     <h3 className="widget-title">Important Links</h3>
                                     <ul>
-                                        <li><NavLink to="/about-us">Track Your Shipment</NavLink></li>
-                                        <li><NavLink to="/about-us">Privacy Policy</NavLink></li>
-                                        <li><NavLink to="/about-us">Terms & Condition</NavLink></li>
+                                        <li><NavLink to="/track-a-shipment">Track Your Shipment</NavLink></li>
+                                        <li><NavLink to="/privacy-policy">Privacy Policy</NavLink></li>
+                                        <li><NavLink to="/terms-and-conditions">Terms & Condition</NavLink></li>
                                     </ul>
                                 </div>
                             </div> 
