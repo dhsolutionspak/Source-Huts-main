@@ -2691,7 +2691,7 @@ ol li {
   .header-style-3 .header-nav {
     clear: both;
     margin: 0px -15px;
-    border-bottom: 1px solid #E9E9E9;
+    border-bottom: 1px solid #ffffff;
   }
   .header-style-3 .header-nav.navbar-collapse {
     align-items: start;
@@ -2706,7 +2706,7 @@ ol li {
   .header-style-3 .header-nav .nav {
     float: none;
     margin: 0px;
-    background: #fff;
+    background: #ff8a00;
     display: block;
     width: 100%;
     left: 0px;
@@ -2741,12 +2741,12 @@ ol li {
     position: static;
     visibility: visible;
     width: auto;
-    background: #f9f9f9;
+    background: #fefefe;
   }
 }
 .header-style-3 .header-nav .nav > li > a {
   color: #fff;
-  font-size: 16px;
+  font-size: 19px;
   padding: 15px 16px;
   cursor: pointer;
   margin: 0px 0px;
@@ -2760,6 +2760,8 @@ ol li {
     color: #000;
   }
 }
+
+
 .header-style-3 .header-nav .nav > li > a:hover {
   background-color: transparent;
   color: #ff8a00;
@@ -2919,7 +2921,7 @@ ol li {
   z-index: 900;
   cursor: pointer;
   padding: 10px;
-  font-size: 14px;
+  font-size: 35px;
   display: none;
 }
 @media (max-width: 991px) {
@@ -2946,59 +2948,75 @@ ol li {
     position: inherit;
   }
 }
+
 @media (max-width: 991px) {
   .header-style-3.mobile-sider-drawer-menu .header-nav {
     position: fixed;
-    width: 250px !important;
+    width: 100vw !important;
     z-index: 999;
     height: 100vh !important;
-    overflow-y: inherit !important;
-    left: -250px;
-    top: 0px;
+    overflow-y: auto !important;
+    left: -100vw;
+    top: 0;
     transition: all 0.5s linear;
-    background-color: #fff;
+    background-color: #ff8a00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .header-style-3.mobile-sider-drawer-menu .header-nav .nav > li:hover > .sub-menu {
-    animation: none !important;
+
+  .header-style-3.mobile-sider-drawer-menu.active .header-nav {
+    left: 0;
   }
+
+  .header-style-3.mobile-sider-drawer-menu .header-nav .nav > li,
+  .header-style-3.mobile-sider-drawer-menu .header-nav .nav > li > a {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-style-3.mobile-sider-drawer-menu .header-nav .nav > li:hover > .sub-menu,
   .header-style-3.mobile-sider-drawer-menu .header-nav .nav > li .sub-menu li:hover > .sub-menu {
     animation: none !important;
   }
-  .header-style-3.mobile-sider-drawer-menu.active .header-nav {
-    left: 15px;
-  }
+
   .header-style-3.mobile-sider-drawer-menu .icon-bar {
     transition: all 0.5s linear;
     position: relative;
   }
+
   .header-style-3.mobile-sider-drawer-menu #mobile-side-drawer {
     min-height: 41px;
     position: relative;
   }
+
   .header-style-3.mobile-sider-drawer-menu.active .icon-bar.icon-bar-first {
-    transform: rotate(45deg) translateX(3px) translateY(2px);
+    transform: rotate(45deg) translate(3px, 2px);
   }
+
   .header-style-3.mobile-sider-drawer-menu.active .icon-bar.icon-bar-three {
-    transform: rotate(-45deg) translateX(3px) translateY(-2px);
+    transform: rotate(-45deg) translate(3px, -2px);
   }
+
   .header-style-3.mobile-sider-drawer-menu .icon-bar.icon-bar-two {
     position: relative;
-    right: 0%;
+    right: 0;
   }
+
   .header-style-3.mobile-sider-drawer-menu.active .icon-bar.icon-bar-two {
     position: absolute;
     right: 100px;
     opacity: 0;
   }
-  .header-style-3.mobile-sider-drawer-menu .is-fixed .header-nav .nav {
-    overflow: auto;
-    max-height: 100%;
-  }
+
+  .header-style-3.mobile-sider-drawer-menu .is-fixed .header-nav .nav,
   .header-style-3.mobile-sider-drawer-menu .header-fixed .header-nav .nav {
     overflow: auto;
     max-height: 100%;
   }
 }
+
 .header-style-3 .sticky-no .main-bar {
   position: static !important;
 }
@@ -5364,7 +5382,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
-  opacity: 0.05;
+  opacity: 0.15;
 }
 @media (max-width: 991px) {
   .tw-hilite-text-wrap .tw-hilite-text span {
@@ -5441,16 +5459,34 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   overflow: hidden;
   cursor: pointer;
 }
-.service-box-style1 .service-content {
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
+.service-box-style1 {
+  position: relative;
+  overflow: hidden; /* Ensure the overlay stays within bounds */
+}
+
+.service-box-style1::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 0; /* Ensure it sits below the content */
   transition: all 0.8s linear;
 }
+
+.service-box-style1 .service-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1; /* Above the overlay */
+  transition: all 0.8s linear;
+}
+
 .service-box-style1 .service-content .service-content-inner {
   padding: 20px;
   margin: 20px;
