@@ -31,10 +31,6 @@ export default function RootLayout() {
             {/* Footer */}
             {!isErrorPage && (isIndexPage ? <Footer2 /> : <Footer1 />)}
 
-            {/* Scroll to Top Button */}
-            <button className="scroll-top">
-                <span className="fa fa-angle-up" id="btn-vibrate"></span>
-            </button>
         </div>
     );
 }
