@@ -1,39 +1,40 @@
-import { useLocation } from "react-router-dom";
-
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../app/sections/common/header";
 import Footer1 from "../app/sections/common/footer1";
 import Footer2 from "../app/sections/common/footer2";
 import AppRoutes from "../routing/app-routes";
 
 export default function RootLayout() {
-    const currentpath = useLocation().pathname;
+    const { pathname } = useLocation();
+    const navigate = useNavigate();
+    const isErrorPage = pathname.startsWith('/error');
+    const isIndexPage = pathname === "/index";
+
+    // ✅ Redirect only from "/" to "/index"
+    useEffect(() => {
+        if (pathname === "/") {
+            navigate("/index", { replace: true }); // Redirect without adding to history
+        }
+    }, [pathname, navigate]);
+
     return (
-        <>
-            <div className="page-wraper">
+        <div className="page-wrapper">
+            {/* Header */}
+            {!isErrorPage && <Header />}
 
-                {
-                    !currentpath?.startsWith('/error') &&
-                    <Header />
-                }
-
-                {/* CONTENT START */}
-                <div className="page-content">
-                    <AppRoutes />
-                </div>
-                {/* CONTENT END */}
-
-                {
-                    !currentpath?.startsWith('/error') &&
-                    (
-                        ((currentpath === "/index" || currentpath === "/index") &&
-                            <Footer2 />) || <Footer1 />
-                    )
-                }
-
-                {/* BUTTON TOP START */}
-                <button className="scroltop"><span className="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
-
+            {/* Main Content */}
+            <div className="page-content">
+                <AppRoutes />
             </div>
-        </>
-    )
+
+            {/* Footer */}
+            {!isErrorPage && (isIndexPage ? <Footer2 /> : <Footer1 />)}
+
+            {/* Scroll to Top Button */}
+            <button className="scroll-top">
+                <span className="fa fa-angle-up" id="btn-vibrate"></span>
+            </button>
+        </div>
+    );
 }
