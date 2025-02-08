@@ -3527,8 +3527,8 @@ ol li {
 }
 @media (max-width: 767px) {
   .footer-dark .ftr-bg {
-    background-size: auto;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 .footer-dark .logo-footer {
